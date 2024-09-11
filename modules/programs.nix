@@ -11,5 +11,6 @@
     git
     curl
     brightnessctl
+    wlr-randr
   ];
 }
