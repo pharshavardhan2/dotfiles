@@ -5,7 +5,7 @@
   home.stateVersion = "24.05";
 
   imports = [
-    ../../modules/desktops/hyprland/hyprland.nix
+    # ../../modules/desktops/hyprland/hyprland.nix
     ../../modules/git.nix
   ];
   

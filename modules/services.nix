@@ -10,5 +10,11 @@
     # cosmic
     desktopManager.cosmic.enable = true;
     displayManager.cosmic-greeter.enable = true;
+
+    # qtile
+    xserver.windowManager.qtile = {
+      enable = true;
+      configFile = ../desktops/qtile/config.py;
+    };
   };
 }
