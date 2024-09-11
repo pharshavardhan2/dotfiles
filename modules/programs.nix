@@ -11,6 +11,6 @@
     git
     curl
     brightnessctl
-    wlr-randr
+    kanshi
   ];
 }

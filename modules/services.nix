@@ -14,7 +14,7 @@
     # qtile
     xserver.windowManager.qtile = {
       enable = true;
-      configFile = ../desktops/qtile/config.py;
+      configFile = ./desktops/qtile/config.py;
     };
   };
 }
