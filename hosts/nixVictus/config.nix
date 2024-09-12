@@ -16,8 +16,13 @@
   # Bootloader.
   boot = {
     kernelPackages = pkgs.linuxPackages_zen; 
-    loader.systemd-boot.enable = true;
-    loader.efi.canTouchEfiVariables = true;
+    loader = {
+      systemd-boot = {
+        enable = true;
+        configurationLimit = 10;
+      };
+      efi.canTouchEfiVariables = true;
+    };
   };
   
   # fonts

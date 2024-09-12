@@ -3,13 +3,13 @@
 pkgs.writeShellScriptBin "emoji" ''
   set -euo pipefail
 
-  EMOJI=$(sed '1,/^### DATA ###$/d' "$0" | tofi "$@" | cut -d ' ' -f 1 | tr -d '\n')
+  EMOJI=$(sed '1,/^### DATA ###$/d' "$0" | tofi --padding-left=10% --padding-top=10% --font-size=16 --num-results=20 "$@" | cut -d ' ' -f 1 | tr -d '\n')
   echo -n "$EMOJI" | wl-copy
   exit
   ### DATA ###
   😀 grinning face face smile happy joy :D grin
-  😃 grinning face with big eyes face happy joy haha :D :) smile funny
-  😄 grinning face with smiling eyes face happy joy funny haha laugh like :D :) smile
+  😃 grinning face with big eyes face happy joy haha :D smile funny
+  😄 grinning face with smiling eyes face happy joy funny haha laugh like :D smile
   😁 beaming face with smiling eyes face happy smile joy kawaii
   😆 grinning squinting face happy joy lol satisfied haha face glad XD laugh
   😅 grinning face with sweat face hot happy laugh sweat smile relief
@@ -17,7 +17,7 @@ pkgs.writeShellScriptBin "emoji" ''
   😂 face with tears of joy face cry tears weep happy happytears haha
   🙂 slightly smiling face face smile
   🙃 upside down face face flipped silly smile
-  😉 winking face face happy mischievous secret ;) smile eye
+  😉 winking face face happy mischievous secret smile eye
   😊 smiling face with smiling eyes face smile happy flushed crush embarrassed shy joy
   😇 smiling face with halo face angel heaven halo innocent
   🥰 smiling face with hearts face love like affection valentines infatuation crush hearts adore
@@ -70,7 +70,7 @@ pkgs.writeShellScriptBin "emoji" ''
   🤓 nerd face face nerdy geek dork
   🧐 face with monocle face stuffy wealthy
   😕 confused face face indifference huh weird hmmm :/
-  😟 worried face face concern nervous :(
+  😟 worried face face concern nervous
   🙁 slightly frowning face face frowning disappointed sad upset
   ☹️ frowning face face sad upset frown
   😮 face with open mouth face surprise impressed wow whoa :O
@@ -83,12 +83,12 @@ pkgs.writeShellScriptBin "emoji" ''
   😨 fearful face face scared terrified nervous
   😰 anxious face with sweat face nervous sweat
   😥 sad but relieved face face phew sweat nervous
-  😢 crying face face tears sad depressed upset :'(
+  😢 crying face face tears sad depressed upset
   😭 loudly crying face face cry tears sad upset depressed
   😱 face screaming in fear face munch scared omg
   😖 confounded face face confused sick unwell oops :S
   😣 persevering face face sick no upset oops
-  😞 disappointed face face sad upset depressed :(
+  😞 disappointed face face sad upset depressed
   😓 downcast face with sweat face hot sad tired exercise
   😩 weary face face tired sleepy sad frustrated upset
   😫 tired face sick whine upset frustrated

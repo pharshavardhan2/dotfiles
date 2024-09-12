@@ -67,10 +67,19 @@
         "$mod, Return, exec, $terminal"
         "$mod, F, exec, $fileManager"
         "$mod, A, exec, tofi-drun --drun-launch=true"
+        "CTRL+SHIFT, L, exec, powermenu"
+        "$mod, L, exec, playerctl pause; loginctl lock-session"
+        "CTRL+SHIFT, E, exec, emoji"
         "ALT, F4, killactive"
         "$mod, M, exit"
         "ALT, TAB, cyclenext"
         "ALT, TAB, bringactivetotop"
+
+        # move focus from windows
+        "$mod, left, movefocus, l"
+        "$mod, right, movefocus, r"
+        "$mod, up, movefocus, u"
+        "$mod, down, movefocus, d"
       ]
       ++ (
         # workspaces
@@ -89,6 +98,14 @@
         10)
       );
 
+      # resize windows
+      binde = [
+        "$mod SHIFT, left, resizeactive, -50 0"
+        "$mod SHIFT, right, resizeactive, 50 0"
+        "$mod SHIFT, up, resizeactive, 0 -50"
+        "$mod SHIFT, down, resizeactive, 0 50"  
+      ];
+      
       bindl = [
         ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
       ];

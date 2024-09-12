@@ -1,3 +1,4 @@
+{ lib, ... }:
 {
   services.dunst = {
     enable = true;
@@ -9,7 +10,7 @@
         progress_bar = true;
         padding = 15;
         horizontal_padding = 15;
-        font = "JetBrainsMono Nerd Font";
+        font = lib.mkDefault "JetBrainsMono Nerd Font";
         transparency = 10;
       };
       urgency_normal = {
@@ -20,7 +21,7 @@
       };
       urgency_critical = {
         timeout = 100;
-      }
+      };
     };
-  }
+  };
 }
