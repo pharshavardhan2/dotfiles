@@ -1,3 +1,7 @@
+{ pkgs, ... }:
+let 
+  fontFamily = "JetBrainsMono Nerd Font";
+in
 {
   programs.hyprlock = {
     enable = true;
@@ -37,6 +41,7 @@
           shadow_passes = 1;
           shadow_boost = 0.5;
           color = "rgba(FFFFFFFF)";
+          font_family = fontFamily;
           font_size = 65;
           position = "0, 300";
           halign = "center";
@@ -50,18 +55,33 @@
           shadow_boost = 0.5;
           color = "rgba(FFFFFFFF)";
           font_size = 20;
+          font_family = fontFamily;
           position = "0, 240";
           halign = "center";
           valign = "center";
         }
+        # lock icon
+        {
+          monitor = "";
+          text = "";
+          shadow_passes = 1;
+          shadow_boost = 0.5;
+          color = "rgba(FFFFFFFF)";
+          font_size = 21;
+          font_family = fontFamily;
+          position = "0, 65";
+          halign = "center";
+          valign = "bottom";
+        }
         # battery
         {          
           monitor = "";
-          text = "cmd[update:5000] ~/.local/share/bin/battery.sh";
+          text = "cmd[update:5000] battery";
           shadow_passes = 1;
           shadow_boost = 0.5;
           color = "rgba(FFFFFFFF)";
           font_size = 14;
+          font_family = fontFamily;
           position = "30, -30";
           halign = "left";
           valign = "top";

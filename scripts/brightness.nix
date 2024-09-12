@@ -14,11 +14,11 @@ pkgs.writeShellScriptBin "brightness" ''
   case $1 in
   	up)
   		brightnessctl -e4 set 5%+
-  		# send_notification "$1"
+  		send_notification "$1"
   		;;
   	down)
   		brightnessctl -e4 set 5%-
-  		# send_notification "$1"
+  		send_notification "$1"
   		;;
   esac
 ''

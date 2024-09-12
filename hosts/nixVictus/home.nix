@@ -11,6 +11,7 @@
     ../../modules/hypridle.nix
     ../../modules/scripts.nix
     ../../modules/waybar.nix
+    ../../modules/wezterm.nix
   ];
   
   xdg = {
@@ -27,16 +28,6 @@
   
   programs = {
     home-manager.enable = true;
-    wezterm = {
-      enable = true;
-      package = inputs.wezterm.packages.x86_64-linux.default;
-      extraConfig = ''
-        local wezterm = require 'wezterm'
-        local config = {}
-        config.color_scheme = 'Tokyo Night (Gogh)'
-        return config
-     '';
-    };
     helix.enable = true;
   };
 }
