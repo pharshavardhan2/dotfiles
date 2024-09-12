@@ -5,13 +5,21 @@
   home.stateVersion = "24.05";
 
   imports = [
-    # ../../modules/desktops/hyprland/hyprland.nix
+    ../../modules/desktops/hyprland/hyprland.nix
     ../../modules/git.nix
+    ../../modules/hyprlock.nix
+    ../../modules/hypridle.nix
   ];
+  
+  xdg = {
+    userDirs = {
+      enable = true;
+      createDirectories = true;
+    };
+  };
   
   programs = {
     home-manager.enable = true;
-    firefox.enable = true;
     wezterm = {
       enable = true;
       package = inputs.wezterm.packages.x86_64-linux.default;

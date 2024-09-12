@@ -9,14 +9,39 @@
         "HYPRCURSOR_SIZE,24"
       ];
       "$mod" = "SUPER";
+      "$terminal" = "wezterm";
+      "$browser" = "firefox";
+      "$fileManager" = "thunar";
       general = {
         gaps_in = 0;
         gaps_out = 0;
         "col.active_border" = "0x77777777";
         resize_on_border = true;
+        layout = "dwindle";
+      };
+      decoration = {
+        rounding = 10;
+        active_opacity = 1.0;
+        inactive_opacity = 0.8;
+        drop_shadow = true;
+        shadow_range = 4;
+        shadow_render_power = 3;
+        "col.shadow" = "rgba(1a1a1aee)";
+        blur = {
+          enabled = true;
+          size = 3;
+          passes = 1;
+          vibrancy = 0.1696;
+        };
+      };
+      dwindle = {
+        pseudotile = true;
+        preserve_split = true;
       };
       input = {
         kb_layout = "us";
+        follow_mouse = 1;
+        sensitivity = 0;
         touchpad = {
           tap-and-drag = true;
         };
@@ -32,9 +57,13 @@
         disable_hyprland_logo = true;
         disable_splash_rendering = true;
       };
+      exec-once = [
+        "hypridle"
+      ];
       bind = [
-        "$mod, B, exec, firefox"
-        "$mod, Return, exec, wezterm"
+        "$mod, B, exec, $browser"
+        "$mod, Return, exec, $terminal"
+        "$mod, F, exec, $fileManager"
         "ALT, F4, killactive"
         "$mod, M, exit"
         "ALT, TAB, cyclenext"

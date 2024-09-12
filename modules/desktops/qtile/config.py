@@ -27,7 +27,6 @@
 from libqtile import bar, layout, qtile, widget
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
-from libqtile.utils import guess_terminal
 from libqtile.backend.wayland import InputConfig
 
 mod = "mod4"
@@ -81,6 +80,9 @@ keys = [
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
     Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
+    # brightness
+    Key([], "F2", lazy.spawn("brightnessctl -q set 5%-"), desc="Decrease brightness by 5"),
+    Key([], "F3", lazy.spawn("brightnessctl -q set +5%"), desc="Increase brightness by 5")
 ]
 
 # Add key bindings to switch VTs in Wayland.
