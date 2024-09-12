@@ -13,6 +13,7 @@
     ../../modules/waybar.nix
     ../../modules/wezterm.nix
     ../../modules/tofi.nix
+    ../../modules/dunst.nix
   ];
   
   xdg = {
