@@ -12,6 +12,7 @@
     ../../modules/scripts.nix
     ../../modules/waybar.nix
     ../../modules/wezterm.nix
+    ../../modules/tofi.nix
   ];
   
   xdg = {
@@ -24,6 +25,7 @@
   stylix.targets = {
     waybar.enable = false;
     hyprland.enable = false;
+    tofi.enable = false;
   };
   
   programs = {

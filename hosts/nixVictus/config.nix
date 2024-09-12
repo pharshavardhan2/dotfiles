@@ -34,8 +34,14 @@
     polarity = "dark";
     cursor = {
       package = pkgs.bibata-cursors;
-      name = "Bibata-Modern-Ice";
+      name = "Bibata-Modern-Classic";
       size = 24;
+    };
+    fonts = {
+      monospace = {
+        name = "JetBrainsMono Nerd Font Mono";
+        package = pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; };
+      };
     };
   };
   # bluetooth

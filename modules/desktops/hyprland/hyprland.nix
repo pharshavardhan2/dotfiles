@@ -60,11 +60,13 @@
       exec-once = [
         "hypridle"
         "waybar"
+        "dunst"
       ];
       bind = [
         "$mod, B, exec, $browser"
         "$mod, Return, exec, $terminal"
         "$mod, F, exec, $fileManager"
+        "$mod, A, exec, tofi-drun --drun-launch=true"
         "ALT, F4, killactive"
         "$mod, M, exit"
         "ALT, TAB, cyclenext"
