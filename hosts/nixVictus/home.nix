@@ -9,6 +9,8 @@
     ../../modules/git.nix
     ../../modules/hyprlock.nix
     ../../modules/hypridle.nix
+    ../../modules/scripts.nix
+    ../../modules/waybar.nix
   ];
   
   xdg = {
@@ -16,6 +18,11 @@
       enable = true;
       createDirectories = true;
     };
+  };
+
+  stylix.targets = {
+    waybar.enable = false;
+    hyprland.enable = false;
   };
   
   programs = {

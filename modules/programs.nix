@@ -27,5 +27,6 @@
     brightnessctl
     pavucontrol
     bat
+    kanshi
   ];
 }

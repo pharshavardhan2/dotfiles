@@ -59,6 +59,7 @@
       };
       exec-once = [
         "hypridle"
+        "waybar"
       ];
       bind = [
         "$mod, B, exec, $browser"

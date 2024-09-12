@@ -81,8 +81,8 @@ keys = [
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
     Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
     # brightness
-    Key([], "F2", lazy.spawn("brightnessctl -q set 5%-"), desc="Decrease brightness by 5"),
-    Key([], "F3", lazy.spawn("brightnessctl -q set +5%"), desc="Increase brightness by 5")
+    Key(["control"], "2", lazy.spawn(["sh", "-c", "brightness down"]), desc="Decrease brightness by 5"),
+    Key(["control"], "3", lazy.spawn(["sh", "-c", "brightness up"]), desc="Increase brightness by 5")
 ]
 
 # Add key bindings to switch VTs in Wayland.
@@ -217,6 +217,7 @@ auto_minimize = True
 # When using the Wayland backend, this can be used to configure input devices.
 wl_input_rules = {
     "type:touchpad": InputConfig(click_method="clickfinger", tap=True, tap_button_map="lrm")
+    "type:keyboard": InputConfig(kb_layout="us")
 }
 
 # xcursor theme (string or None) and size (integer) for Wayland backend
