@@ -5,7 +5,7 @@ pkgs.writeShellScriptBin "brightness" ''
 
   send_notification() {
   	brightness=$(brightnessctl -m | cut -d, -f4 | sed 's/%//')
-  	notify-send -a "Backlight" -u low -r 9994 -h int:value:"$brightness" -i "brightness" "Brightness" "Currently at $brightness%" -t 1000
+  	${pkgs.libnotify}/bin/notify-send -a "Backlight" -u low -r 9994 -h int:value:"$brightness" -i "brightness" "Brightness" "Currently at $brightness%" -t 1000
   }
 
   case $1 in

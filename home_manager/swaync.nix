@@ -55,6 +55,7 @@
         };
         backlight = {
           label = "󰃟";
+          device = "amdgpu_bl2";
         };
       };
     };
