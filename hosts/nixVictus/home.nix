@@ -5,15 +5,7 @@
   home.stateVersion = "24.05";
 
   imports = [
-    ../../modules/desktops/hyprland/hyprland.nix
-    ../../modules/git.nix
-    ../../modules/hyprlock.nix
-    ../../modules/hypridle.nix
-    ../../modules/scripts.nix
-    ../../modules/waybar.nix
-    ../../modules/wezterm.nix
-    ../../modules/tofi.nix
-    ../../modules/dunst.nix
+    ../../home_manager
   ];
   
   xdg = {

@@ -8,9 +8,8 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware.nix
-      ../../modules/programs.nix
-      ../../modules/services.nix
       inputs.nixos-cosmic.nixosModules.default
+      ../../system
     ];
 
   # Bootloader.
@@ -68,6 +67,9 @@
   i18n.defaultLocale = "en_US.UTF-8";
 
   console.keyMap = "us";
+
+  # completions for system packages
+  environment.pathsToLink = [ "/share/zsh" ];
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.harsha = {
