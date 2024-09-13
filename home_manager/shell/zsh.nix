@@ -2,7 +2,7 @@
 {
   programs.zsh = {
     enable = true;
-    dotDir = "dotfiles/home_manager/shell";
+    dotDir = ".config/zsh";
     autocd = true;
     dirHashes = {
       docs  = "$HOME/Documents";
