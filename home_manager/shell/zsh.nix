@@ -28,5 +28,16 @@
       zstyle ':completion:*' cache-path "${config.xdg.cacheHome}/zsh/.zcompcache"
       _comp_options+=(globdots)
     '';
+    plugins = [
+      {
+        name = "fast-syntax-highlighting";
+        src = pkgs.fetchFromGitHub {
+          owner = "zdharma-continuum";
+          repo = "fast-syntax-highlighting";
+          rev = "cf318e0";
+          sha256 = "sha256-RVX9ZSzjBW3LpFs2W86lKI6vtcvDWP6EPxzeTcRZua4=";
+        };
+      }
+    ];
   };
 }
