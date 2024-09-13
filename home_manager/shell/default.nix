@@ -4,5 +4,6 @@
     ./starship.nix
     ./aliases.nix
     ./fish.nix
+    ./fzf.nix
   ];
 }
