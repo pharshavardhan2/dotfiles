@@ -34,7 +34,8 @@
   # stylix 
   stylix = {
     enable = true;
-    image = ../../walls/beautifulmountainscape.jpg;
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/everforest.yaml";
+    # image = ../../walls/beautifulmountainscape.jpg;
     polarity = "dark";
     cursor = {
       package = pkgs.bibata-cursors;

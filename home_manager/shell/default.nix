@@ -3,5 +3,6 @@
     ./zsh.nix
     ./starship.nix
     ./aliases.nix
+    ./fish.nix
   ];
 }
