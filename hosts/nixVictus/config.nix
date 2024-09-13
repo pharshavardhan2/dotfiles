@@ -3,7 +3,6 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 { config, pkgs, inputs, host, username, ... }:
-
 {
   imports =
     [ # Include the results of the hardware scan.
@@ -35,7 +34,7 @@
   stylix = {
     enable = true;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/everforest.yaml";
-    # image = ../../walls/beautifulmountainscape.jpg;
+    image = ../../walls/beautifulmountainscape.jpg;
     polarity = "dark";
     cursor = {
       package = pkgs.bibata-cursors;

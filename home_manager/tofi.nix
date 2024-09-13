@@ -3,9 +3,9 @@
   programs.tofi = {
     enable = true;
     settings = {
-      text-color = config.stylix.base16Scheme.base0D;
-      prompt-color = config.stylix.base16Scheme.base0F;
-      selection-color = config.stylix.base16Scheme.base0F;
+      text-color = config.lib.stylix.colors.base0D;
+      prompt-color = config.lib.stylix.colors.base0F;
+      selection-color = config.lib.stylix.colors.base0F;
       background-color = "#000A"; 
       prompt-text = "> ";
       border-width = 0;
