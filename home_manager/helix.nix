@@ -33,9 +33,10 @@
             tab = "all";
             nbsp = "all";
             nnbsp = "all";
-            newline = "all";
+            # newline = "all";
           };
           characters = {
+            space = "·";
             nbsp = "⍽";
             nnbsp = "␣";
             tab = "→";
