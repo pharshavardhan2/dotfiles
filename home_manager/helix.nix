@@ -1,4 +1,4 @@
-{ pkgs }:
+{ pkgs, ... }:
 {
   programs.helix = {
     enable = true;
@@ -6,7 +6,7 @@
     extraPackages = with pkgs; [
       ruff
       pyright
-    ]
+    ];
     settings = {
       editor = {
         line-number = "relative";
@@ -55,8 +55,8 @@
         ruff = {
           command = "ruff";
           args = [ "server" ];
-        }
-      }
+        };
+      };
     };
   };
 }

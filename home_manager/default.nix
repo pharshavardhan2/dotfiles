@@ -3,6 +3,7 @@
     ../desktops/hyprland/hyprland.nix
     ./shell
     ./git.nix
+    ./helix.nix
     ./hypridle.nix
     ./hyprlock.nix
     ./hyprpaper.nix
