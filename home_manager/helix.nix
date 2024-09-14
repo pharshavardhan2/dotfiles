@@ -6,6 +6,8 @@
     extraPackages = with pkgs; [
       ruff
       pyright
+      nil
+      nixpkgs-fmt
     ];
     settings = {
       editor = {
@@ -27,9 +29,13 @@
           select = "underline";
         };
         whitespace = {
-          render = "all";
+          render = {
+            tab = "all";
+            nbsp = "all";
+            nnbsp = "all";
+            newline = "all";
+          };
           characters = {
-            space = "·";
             nbsp = "⍽";
             nnbsp = "␣";
             tab = "→";
@@ -47,6 +53,13 @@
           indent = {
             tab-width = 2;
             unit = "  ";
+          };
+          auto-format = true;
+        }
+        {
+          name = "nix";
+          formatter = {
+            command = "nixpkgs-fmt";
           };
           auto-format = true;
         }
