@@ -1,8 +1,13 @@
 { pkgs, inputs, username, host, ... }:
 {
-  home.username = "${username}";
-  home.homeDirectory = "/home/${username}";
-  home.stateVersion = "24.05";
+  home = {
+    username = "${username}";
+    homeDirectory = "/home/${username}";
+    stateVersion = "24.05";
+    packages = [
+      pkgs.zed-editor
+    ];
+  };
 
   imports = [
     ../../home_manager
@@ -23,6 +28,5 @@
   
   programs = {
     home-manager.enable = true;
-    helix.enable = true;
   };
 }
