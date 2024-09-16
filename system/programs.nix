@@ -24,5 +24,6 @@
     bat
     kanshi
     nautilus
+    kdePackages.okular
   ];
 }

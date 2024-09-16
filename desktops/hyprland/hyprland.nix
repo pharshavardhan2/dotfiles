@@ -66,6 +66,7 @@
         "$mod, B, exec, $browser"
         "$mod, Return, exec, $terminal"
         "$mod, F, exec, $fileManager"
+        "$mod, O, exec, okular"
         "$mod, A, exec, tofi-drun --drun-launch=true"
         "CTRL+SHIFT, L, exec, powermenu"
         "$mod, L, exec, playerctl pause; loginctl lock-session"
