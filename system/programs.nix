@@ -8,13 +8,6 @@
       package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
     };
     firefox.enable = true;
-    thunar = {
-      enable = true;
-      plugins = with pkgs.xfce; [
-        thunar-archive-plugin
-        thunar-volman
-      ];
-    };
   };
 
   # List packages installed in system profile. To search, run:
@@ -30,5 +23,6 @@
     pavucontrol
     bat
     kanshi
+    nautilus
   ];
 }
