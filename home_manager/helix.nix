@@ -44,10 +44,6 @@
         {
           name = "python";
           language-servers = [ "pylyzer" "ruff" ];
-          indent = {
-            tab-width = 2;
-            unit = "  ";
-          };
           auto-format = true;
           formatter = {
             command = "ruff";

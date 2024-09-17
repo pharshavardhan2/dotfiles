@@ -8,6 +8,7 @@
       zed-editor
       # lsp
       pylyzer
+      basedpyright
       ruff
       nil
       nixpkgs-fmt
@@ -17,6 +18,12 @@
   imports = [
     ../../home_manager
   ];
+
+  # zed config files
+  home.file.".config/zed" = {
+    source = ../../config/zed;
+    recursive = true;
+  };
 
   xdg = {
     userDirs = {
