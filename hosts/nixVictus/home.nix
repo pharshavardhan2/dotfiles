@@ -7,7 +7,7 @@
     packages = with pkgs; [
       zed-editor
       # lsp
-      pyright
+      pylyzer
       ruff
       nil
       nixpkgs-fmt

@@ -1,4 +1,3 @@
-{ pkgs, ... }:
 {
   programs.helix = {
     enable = true;
@@ -44,13 +43,7 @@
       language = [
         {
           name = "python";
-          # scope = "source.python";
-          # injection-regex = "python";
-          # file-types = [ "py" ];
-          # shebangs = [ "python" ];
-          # roots = [ "pyproject.toml" "setup.py" "Poetry.lock" "manage.py" ];
-          # comment-token = "#";
-          language-servers = [ "pyright" "ruff" ];
+          language-servers = [ "pylyzer" "ruff" ];
           indent = {
             tab-width = 2;
             unit = "  ";
@@ -74,10 +67,10 @@
           command = "ruff";
           args = [ "server" ];
         };
-        # pyright = {
-        #   command = "pyright-langserver";
-        #   args = [ "--stdio" ];
-        # };
+        pylyzer = {
+          command = "pylyzer";
+          args = [ "--server" ];
+        };
       };
     };
   };
