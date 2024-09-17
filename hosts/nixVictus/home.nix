@@ -4,15 +4,20 @@
     username = "${username}";
     homeDirectory = "/home/${username}";
     stateVersion = "24.05";
-    packages = [
-      pkgs.zed-editor
+    packages = with pkgs; [
+      zed-editor
+      # lsp
+      pyright
+      ruff
+      nil
+      nixpkgs-fmt
     ];
   };
 
   imports = [
     ../../home_manager
   ];
-  
+
   xdg = {
     userDirs = {
       enable = true;
@@ -25,7 +30,7 @@
     hyprland.enable = false;
     tofi.enable = false;
   };
-  
+
   programs = {
     home-manager.enable = true;
   };
