@@ -12,6 +12,8 @@
       ruff
       nil
       nixpkgs-fmt
+      # nightlight
+      wl-gammarelay-rs
     ];
   };
 

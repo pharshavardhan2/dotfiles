@@ -20,9 +20,9 @@ in
           "idle_inhibitor"
         ];
         modules-right = [
-          "custom/hyprbindings"
+          "custom/night-light"
           "custom/notification"
-          "custom/exit"
+          "power-profiles-daemon"
           "battery"
           "tray"
           "clock"
@@ -169,6 +169,24 @@ in
           on-click = "";
           tooltip = false;
         };
+        "custom/night-light" = {
+          "format" = " {}";
+          "tooltip-format" = "scroll to adjust night light";
+          "exec" = "wl-gammarelay-rs watch {t}";
+          "on-scroll-up" = "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateTemperature n +100";
+          "on-scroll-down" = "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateTemperature n -100";
+        };
+        "power-profiles-daemon" = {
+          "format" = "{icon}";
+          "tooltip-format" = "Power profile: {profile}\nDriver = {driver}";
+          "tooltip" = true;
+          "format-icons" = {
+            "default" = " ";
+            "performance" = " ";
+            "balanced" = " ";
+            "power-saver" = " ";
+          };
+        };
       }
     ];
     style = lib.concatStrings [
@@ -245,7 +263,8 @@ in
           border-radius: 0px 0px 40px 0px;
         }
         #custom-hyprbindings, #network, #battery,
-        #custom-notification, #tray, #custom-exit {
+        #custom-notification, #tray, #power-profiles-daemon,
+        #custom-night-light {
           font-weight: bold;
           background: #${config.lib.stylix.colors.base0F};
           color: #${config.lib.stylix.colors.base00};
