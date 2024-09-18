@@ -57,6 +57,13 @@
           };
           auto-format = true;
         }
+        {
+          name = "rust";
+          auto-format = true;
+          formatter = {
+            command = "rustfmt";
+          };
+        }
       ];
       language-server = {
         ruff = {
@@ -66,6 +73,11 @@
         pylyzer = {
           command = "pylyzer";
           args = [ "--server" ];
+        };
+        rust-analyzer = {
+          config = {
+            check.command = "clippy";
+          };
         };
       };
     };

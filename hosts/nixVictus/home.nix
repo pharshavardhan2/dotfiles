@@ -14,6 +14,8 @@
       nixpkgs-fmt
       # nightlight
       wl-gammarelay-rs
+      # racket programming language
+      racket
     ];
   };
 
