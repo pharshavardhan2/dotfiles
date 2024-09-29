@@ -17,6 +17,7 @@
       # racket programming language
       racket
       qbittorrent
+      vlc
     ];
   };
 
