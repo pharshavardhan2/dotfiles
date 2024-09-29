@@ -16,6 +16,7 @@
       wl-gammarelay-rs
       # racket programming language
       racket
+      qbittorrent
     ];
   };
 
