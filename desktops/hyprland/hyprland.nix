@@ -122,6 +122,9 @@
       ];
       windowrulev2 = [
         "suppressevent maximize, class:.*"
+        "idleinhibit fullscreen, class:^(*)$"
+        "idleinhibit fullscreen, title:^(*)$"
+        "idleinhibit fullscreen, fullscreen:1"
       ];
     };
   };
