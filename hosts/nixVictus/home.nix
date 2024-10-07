@@ -18,6 +18,7 @@
       racket
       qbittorrent
       vlc
+      kdePackages.kamoso
     ];
   };
 
