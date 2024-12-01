@@ -17,7 +17,7 @@ in
           "pulseaudio"
           "cpu"
           "memory"
-          "idle_inhibitor"
+          "custom/cloudflare"
         ];
         modules-right = [
           "custom/night-light"
@@ -187,6 +187,13 @@ in
             "power-saver" = " ";
           };
         };
+        "custom/cloudflare" = {
+          "exec" = "cloudflare.sh";
+          "on-click" = ":";
+          "signal" = 1;
+          "format" = "󰖂 ";
+          "return-type" = "json";
+        };
       }
     ];
     style = lib.concatStrings [
@@ -245,7 +252,7 @@ in
         tooltip label {
           color: #${config.lib.stylix.colors.base08};
         }
-        #window, #pulseaudio, #cpu, #memory, #idle_inhibitor {
+        #window, #pulseaudio, #cpu, #memory, #custom-cloudflare {
           font-weight: bold;
           margin: 4px 0px;
           margin-left: 7px;

@@ -5,7 +5,8 @@
 { config, pkgs, inputs, host, username, ... }:
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
+      # Include the results of the hardware scan.
       ./hardware.nix
       inputs.nixos-cosmic.nixosModules.default
       ../../system
@@ -13,7 +14,7 @@
 
   # Bootloader.
   boot = {
-    kernelPackages = pkgs.linuxPackages_zen; 
+    kernelPackages = pkgs.linuxPackages_zen;
     loader = {
       systemd-boot = {
         enable = true;
@@ -22,14 +23,14 @@
       efi.canTouchEfiVariables = true;
     };
   };
-  
+
   # fonts
   fonts = {
     packages = with pkgs; [
       noto-fonts
     ];
   };
-  
+
   # stylix 
   stylix = {
     enable = true;
@@ -50,7 +51,7 @@
   };
   # bluetooth
   hardware.bluetooth.enable = true;
-  
+
   # security
   security = {
     rtkit.enable = true;
@@ -77,22 +78,22 @@
     description = "harsha";
     extraGroups = [ "networkmanager" "wheel" ];
     shell = pkgs.fish;
-    packages = with pkgs; [];
+    packages = with pkgs; [ ];
   };
 
   # Allow unfree packages
-  # nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.allowUnfree = true;
 
   # Enable flakes and nix-command
   nix = {
     settings = {
-      experimental-features = [ "nix-command" "flakes"];
+      experimental-features = [ "nix-command" "flakes" ];
       auto-optimise-store = true;
-      substituters = [ 
-        "https://hyprland.cachix.org" 
+      substituters = [
+        "https://hyprland.cachix.org"
         "https://cosmic.cachix.org/"
       ];
-      trusted-public-keys = [ 
+      trusted-public-keys = [
         "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
         "cosmic.cachix.org-1:Dya9IyXD4xdBehWjrkPv6rtxpmMdRel02smYzA85dPE="
       ];

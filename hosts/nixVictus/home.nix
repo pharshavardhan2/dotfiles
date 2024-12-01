@@ -18,7 +18,8 @@
       racket
       qbittorrent
       vlc
-      kdePackages.kamoso
+      snapshot
+      cloudflare-warp
     ];
   };
 
